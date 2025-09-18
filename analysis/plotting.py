@@ -98,6 +98,7 @@ class Plotter:
         """Instantiates plotter with list of |fuzzers|. If |quick| is True,
         creates plots faster but, with less detail.
         """
+        plt.rcParams['svg.fonttype'] = 'none'
         self._fuzzer_colors = {
             fuzzer: self._COLOR_PALETTE[idx % len(self._COLOR_PALETTE)]
             for idx, fuzzer in enumerate(sorted(fuzzers))
